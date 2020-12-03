@@ -1,7 +1,3 @@
-//
-// Created by Xaramx on 23.11.2020.
-//
-
 #ifndef PROBA2_SHINOBI_H
 #define PROBA2_SHINOBI_H
 #include <iostream>
