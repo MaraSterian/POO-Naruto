@@ -10,7 +10,7 @@
 class Team
 {
 private:
-    std::string team_name;
+    std::string team_name{};
     std::string leader;
     std::string affiliations;
     std::vector<std::reference_wrapper<const Shinobi>> shinobis{};

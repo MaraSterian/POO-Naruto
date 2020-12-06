@@ -12,7 +12,7 @@
 class Jutsu {
 
 protected:
-    std::string jutsu_name;
+    std::string jutsu_name{};
     std::vector<std::reference_wrapper<const Chakra_Nature>> Chakra_natures{};
     std::string jutsu_rank;
     std::string users;
