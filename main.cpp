@@ -45,7 +45,7 @@ int main()
     std::cout<<konohagakure;
 
     Ninjutsu acid_flower{"Acid Flower", "S-rank", "Utakata"};
-    acid_flower.add_chakra_nature(water_release);
+    acid_flower.add_chakra_nature(water_release); //nu m-am descurcat la functiile virtuale, o sa mai lucrez, am trimis pentru un feedback
 
     Genjutsu genjutsu_kiss{"Genjutsu Kiss", "B-rank", "Gamariki"};
     genjutsu_kiss.add_chakra_nature(yin_release);
@@ -53,5 +53,7 @@ int main()
     Taijutsu dynamic_entry{"Dynamic Entry", "D-rank", "Might Guy"};
 
     return 0;
-
+    
+    //in afara de functiile virtuale, mai e ceva ce nu merge, nu stiu inca cum sa rezolv, dar lucrez la asta
+    
 }
