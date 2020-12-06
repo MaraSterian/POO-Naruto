@@ -1,5 +1,5 @@
-#ifndef PROBA2_TEAM_H
-#define PROBA2_TEAM_H
+#ifndef POO_TEAM_H
+#define POO_TEAM_H
 #include <iostream>
 #include <functional>
 #include <string>
@@ -7,7 +7,6 @@
 #include "Shinobi.h"
 
 
-class Shinobi;
 class Team
 {
 private:
@@ -23,10 +22,10 @@ public:
     std::string get_leader();
     std::string get_affiliations();
 
-    void get_shinobi(const Shinobi& shinobi);
+    void add_shinobi(const Shinobi& shinobi);
 
     friend std::ostream& operator<<(std::ostream& out, const Team& team);
 
 };
 
-#endif //PROBA2_TEAM_H
+#endif //POO_TEAM_H

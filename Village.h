@@ -1,5 +1,5 @@
-#ifndef NARUTO_VILLAGE_H
-#define NARUTO_VILLAGE_H
+#ifndef POO_VILLAGE_H
+#define POO_VILLAGE_H
 #include <iostream>
 #include <string>
 #include <vector>
@@ -21,7 +21,7 @@ public:
     std::string get_country();
     std::string get_leader();
 
-    void get_team(const Team& team);
+    void add_team(const Team& team);
 
     friend std::ostream& operator<<(std::ostream& out, const Village& village);
 
@@ -30,4 +30,4 @@ public:
 };
 
 
-#endif //NARUTO_VILLAGE_H
+#endif //POO_VILLAGE_H

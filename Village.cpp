@@ -16,7 +16,7 @@ std::string Village::get_leader() {
     return leader;
 }
 
-void Village::get_team(const Team& team)
+void Village::add_team(const Team& team)
 {
     teams.push_back(team);
 }
@@ -30,7 +30,7 @@ std::ostream& operator<<(std::ostream& out, const Village& village)
         out<<team.get().get_team_name()<<" ";
     }
 
-    out << '\n';
+    out<<'\n';
 
     return out;
 }

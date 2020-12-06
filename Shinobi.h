@@ -1,18 +1,19 @@
-#ifndef PROBA2_SHINOBI_H
-#define PROBA2_SHINOBI_H
+#ifndef POO_SHINOBI_H
+#define POO_SHINOBI_H
 #include <iostream>
 #include <functional>
 #include <string>
 #include <vector>
 #include "Team.h"
+#include "Jutsu.h"
 
-class Team;
 class Shinobi
 {
 private:
     std::string shinobi_name{};
     std::string sex;
     std::string shinobi_rank;
+    std::vector<std::reference_wrapper<const Jutsu>> jutsus{};
 public:
     Shinobi(const std::string& new_shinobi_name, std::string new_sex, std::string new_shinobi_rank);
 
@@ -20,7 +21,11 @@ public:
 
     std::string get_sex();
     std::string get_shinobi_rank();
+
+    void add_jutsu(const Jutsu& jutsu);
+
+    friend std::ostream& operator<<(std::ostream& out, const Shinobi& shinobi);
 };
 
 
-#endif //PROBA2_SHINOBI_H
+#endif //POO_SHINOBI_H

@@ -13,7 +13,7 @@ std::string Team::get_affiliations() {
     return affiliations;
 }
 
-void Team::get_shinobi(const Shinobi& shinobi)
+void Team::add_shinobi(const Shinobi& shinobi)
 {
     shinobis.push_back(shinobi);
 }
@@ -23,12 +23,18 @@ std::ostream& operator<<(std::ostream& out, const Team& team)
 {
     out<<"Team: ";
 
+    if (team.shinobis.empty())
+    {
+        out<<team.get_team_name()<<" has no members.\n";
+        return out;
+    }
+
     for (const auto& shinobi : team.shinobis)
     {
         out<<shinobi.get().get_shinobi_name()<<" ";
     }
 
-    out << '\n';
+    out<<'\n';
 
     return out;
 }

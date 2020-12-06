@@ -1,19 +1,20 @@
-#ifndef PROBA3_NINJUTSU_H
-#define PROBA3_NINJUTSU_H
+#ifndef POO_NINJUTSU_H
+#define POO_NINJUTSU_H
 #include "Jutsu.h"
 
 
 class Ninjutsu: public Jutsu {
 
-private:
+protected:
     std::string ninjutsu_name;
+    std::vector<std::reference_wrapper<const Chakra_Nature>> Chakra_natures{};
+    std::string ninjutsu_rank;
+    std::string users;
 
 public:
-    Ninjutsu(std::string new_ninjutsu_name);
-    std::string get_ninjutsu_name();
-
-
+    Ninjutsu(std::string new_ninjutsu_name, std::string new_ninjutsu_rank, std::string new_users);
+    virtual void Jutsu::add_chakra_nature(const Chakra_Nature& chakra_nature);
 };
 
 
-#endif //PROBA3_NINJUTSU_H
+#endif //POO_NINJUTSU_H

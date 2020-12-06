@@ -1,5 +1,5 @@
-#ifndef PROBA3_CHAKRA_NATURE_H
-#define PROBA3_CHAKRA_NATURE_H
+#ifndef POO_CHAKRA_NATURE_H
+#define POO_CHAKRA_NATURE_H
 #include <iostream>
 #include <string>
 
@@ -15,4 +15,4 @@ public:
 };
 
 
-#endif //PROBA3_CHAKRA_NATURE_H
+#endif //POO_CHAKRA_NATURE_H
