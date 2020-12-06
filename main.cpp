@@ -54,6 +54,6 @@ int main()
 
     return 0;
     
-    //in afara de functiile virtuale, mai e ceva ce nu merge, nu stiu inca cum sa rezolv, dar lucrez la asta
+    //in afara de functiile virtuale, mai e ceva ce nu merge, nu stiu inca cum sa rezolv, dar lucrez la asta, as vrea sa stiu daca sunt pe drumul cel bun??
     
 }
