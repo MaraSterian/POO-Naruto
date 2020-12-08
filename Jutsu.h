@@ -5,9 +5,6 @@
 #include <functional>
 #include <string>
 #include "Chakra_Nature.h"
-#include "Ninjutsu.h"
-#include "Genjutsu.h"
-#include "Taijutsu.h"
 
 class Jutsu {
 

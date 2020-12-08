@@ -13,7 +13,7 @@ private:
 
 public:
     Genjutsu(std::string new_genjutsu_name, std::string new_genjutsu_rank, std::string new_users);
-    virtual void Jutsu::add_chakra_nature(const Chakra_Nature& chakra_nature);
+    virtual void add_chakra_nature(const Chakra_Nature& chakra_nature);
 };
 
 

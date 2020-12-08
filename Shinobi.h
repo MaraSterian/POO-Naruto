@@ -4,7 +4,6 @@
 #include <functional>
 #include <string>
 #include <vector>
-#include "Team.h"
 #include "Jutsu.h"
 
 class Shinobi

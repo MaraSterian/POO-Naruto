@@ -1,7 +1,9 @@
 #include <iostream>
 #include "Shinobi.h"
 #include "Village.h"
-#include "Jutsu.h"
+#include "Ninjutsu.h"
+#include "Genjutsu.h"
+#include "Taijutsu.h"
 #include <string>
 
 int main()
@@ -32,7 +34,7 @@ int main()
     uchiha_flame_formation.add_chakra_nature(fire_release);
     std::cout<<uchiha_flame_formation;
 
-    Team team_7{"Team 7", "Kakashi", "konohagakure"};
+    Team team_7{"Team 7", "Kakashi", konohagakure.get_village_name()};
 
     team_7.add_shinobi(naruto);
     team_7.add_shinobi(sasuke);
@@ -45,7 +47,7 @@ int main()
     std::cout<<konohagakure;
 
     Ninjutsu acid_flower{"Acid Flower", "S-rank", "Utakata"};
-    acid_flower.add_chakra_nature(water_release); //nu m-am descurcat la functiile virtuale, o sa mai lucrez, am trimis pentru un feedback
+    acid_flower.add_chakra_nature(water_release);
 
     Genjutsu genjutsu_kiss{"Genjutsu Kiss", "B-rank", "Gamariki"};
     genjutsu_kiss.add_chakra_nature(yin_release);
@@ -53,7 +55,5 @@ int main()
     Taijutsu dynamic_entry{"Dynamic Entry", "D-rank", "Might Guy"};
 
     return 0;
-    
-    //in afara de functiile virtuale, mai e ceva ce nu merge, nu stiu inca cum sa rezolv, dar lucrez la asta, as vrea sa stiu daca sunt pe drumul cel bun??
-    
+
 }
