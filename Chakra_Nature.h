@@ -10,8 +10,8 @@ private:
     std::string chakra_nature_name{};
 
 public:
-    Chakra_Nature(const std::string& new_chakra_nature_name);
-    const std::string& get_chakra_name() const;
+    explicit Chakra_Nature(std::string  new_chakra_nature_name);
+    [[nodiscard]] const std::string& get_chakra_name() const;
 };
 
 

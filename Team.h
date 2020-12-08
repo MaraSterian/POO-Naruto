@@ -12,15 +12,13 @@ class Team
 private:
     std::string team_name{};
     std::string leader;
-    std::string affiliations;
+    [[maybe_unused]] std::string affiliations;
     std::vector<std::reference_wrapper<const Shinobi>> shinobis{};
 
 public:
     Team(std::string new_team_name, std::string new_leader, std::string new_affiliations);
 
-    const std::string& get_team_name() const;
-    std::string get_leader();
-    std::string get_affiliations();
+    [[nodiscard]] const std::string& get_team_name() const;
 
     void add_shinobi(const Shinobi& shinobi);
 

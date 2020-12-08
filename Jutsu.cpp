@@ -1,24 +1,17 @@
 #include <iostream>
+#include <utility>
 #include "Jutsu.h"
 
 //Jutsu::Jutsu() = default;
 
-Jutsu::Jutsu(const std::string& new_jutsu_name, std::string new_jutsu_rank, std::string new_users)
-        : jutsu_name{new_jutsu_name}, jutsu_rank(new_jutsu_rank), users(new_users) {}
+Jutsu::Jutsu(std::string  new_jutsu_name, std::string new_jutsu_rank, std::string  new_users)
+        : jutsu_name{std::move(new_jutsu_name)}, jutsu_rank(std::move(new_jutsu_rank)), users(std::move(new_users)) {}
 
 const std::string& Jutsu::get_jutsu_name() const {return jutsu_name;}
 
 void Jutsu::add_chakra_nature(const Chakra_Nature& chakra_nature)
 {
-    Chakra_natures.push_back(chakra_nature);
-}
-
-std::string Jutsu::get_jutsu_rank() {
-    return jutsu_rank;
-}
-
-std::string Jutsu::get_users() {
-    return users;
+    Chakra_natures.emplace_back(chakra_nature);
 }
 
 void Jutsu::jutsu_method() {
@@ -38,6 +31,5 @@ std::ostream& operator<<(std::ostream& out, const Jutsu& jutsu)
 
     return out;
 }
-Jutsu::~Jutsu() {
-    std::cout<<"And that's the "<<jutsu_name<<" jutsu!\n";
-}
+
+Jutsu::~Jutsu() = default;

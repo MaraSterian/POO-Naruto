@@ -5,15 +5,10 @@
 
 class Taijutsu: public Jutsu {
 
-private:
-    std::string taijutsu_name;
-    std::vector<std::reference_wrapper<const Chakra_Nature>> Chakra_natures{};
-    std::string taijutsu_rank;
-    std::string users;
-
 public:
     Taijutsu(std::string new_taijutsu_name, std::string new_taijutsu_rank, std::string new_users);
-    virtual void add_chakra_nature(const Chakra_Nature& chakra_nature);
+    void add_chakra_nature(const Chakra_Nature& chakra_nature) override;
+    static std::string get_class_name();
 };
 
 

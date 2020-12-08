@@ -14,9 +14,9 @@ private:
     std::string shinobi_rank;
     std::vector<std::reference_wrapper<const Jutsu>> jutsus{};
 public:
-    Shinobi(const std::string& new_shinobi_name, std::string new_sex, std::string new_shinobi_rank);
+    Shinobi(std::string  new_shinobi_name, std::string new_sex, std::string new_shinobi_rank);
 
-    const std::string& get_shinobi_name() const;
+    [[nodiscard]] const std::string& get_shinobi_name() const;
 
     std::string get_sex();
     std::string get_shinobi_rank();

@@ -1,31 +1,24 @@
 #include "Team.h"
+#include <utility>
 
 Team::Team(std::string new_team_name, std::string new_leader, std::string new_affiliations)
-        : team_name(new_team_name), leader(new_leader), affiliations(new_affiliations) {}
+        : team_name(std::move(new_team_name)), leader(std::move(new_leader)), affiliations(std::move(new_affiliations)) {}
 
 const std::string& Team::get_team_name() const {return team_name;}
 
-std::string Team::get_leader() {
-    return leader;
-}
-
-std::string Team::get_affiliations() {
-    return affiliations;
-}
-
 void Team::add_shinobi(const Shinobi& shinobi)
 {
-    shinobis.push_back(shinobi);
+    shinobis.emplace_back(shinobi);
 }
 
 
 std::ostream& operator<<(std::ostream& out, const Team& team)
 {
-    out<<"Team: ";
+    out<<"Team "<<team.get_team_name()<<" - ";
 
     if (team.shinobis.empty())
     {
-        out<<team.get_team_name()<<" has no members.\n";
+        out<<" has no members.\n";
         return out;
     }
 
@@ -34,7 +27,7 @@ std::ostream& operator<<(std::ostream& out, const Team& team)
         out<<shinobi.get().get_shinobi_name()<<" ";
     }
 
-    out<<'\n';
+    out<<" - leader "<<team.leader<<'\n';
 
     return out;
 }
