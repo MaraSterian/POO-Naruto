@@ -12,3 +12,5 @@ void Ninjutsu::add_chakra_nature(const Chakra_Nature& chakra_nature) {
 std::string Ninjutsu::get_class_name() {
     return "ninjutsu";
 }
+
+Ninjutsu::~Ninjutsu() = default;

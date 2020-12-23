@@ -9,6 +9,7 @@ public:
     Genjutsu(std::string new_genjutsu_name, std::string new_genjutsu_rank, std::string new_users);
     void add_chakra_nature(const Chakra_Nature& chakra_nature) override;
     static std::string get_class_name();
+    ~Genjutsu() override;
 };
 
 

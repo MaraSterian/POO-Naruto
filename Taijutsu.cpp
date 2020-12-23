@@ -11,3 +11,5 @@ void Taijutsu::add_chakra_nature(const Chakra_Nature& chakra_nature) {
 std::string Taijutsu::get_class_name() {
     return "taijutsu";
 }
+
+Taijutsu::~Taijutsu() = default;

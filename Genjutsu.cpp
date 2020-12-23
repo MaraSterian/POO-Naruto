@@ -12,3 +12,5 @@ void Genjutsu::add_chakra_nature(const Chakra_Nature& chakra_nature) {
 std::string Genjutsu::get_class_name() {
     return "genjutsu";
 }
+
+Genjutsu::~Genjutsu() = default;

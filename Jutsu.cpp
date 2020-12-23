@@ -2,7 +2,6 @@
 #include <utility>
 #include "Jutsu.h"
 
-//Jutsu::Jutsu() = default;
 
 Jutsu::Jutsu(std::string  new_jutsu_name, std::string new_jutsu_rank, std::string  new_users)
         : jutsu_name{std::move(new_jutsu_name)}, jutsu_rank(std::move(new_jutsu_rank)), users(std::move(new_users)) {}

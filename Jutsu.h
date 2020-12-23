@@ -10,7 +10,7 @@ class Jutsu {
 
 protected:
     std::string jutsu_name{};
-    std::vector<std::reference_wrapper<const Chakra_Nature>> Chakra_natures{};
+    std::vector<std::reference_wrapper<const Chakra_Nature>> Chakra_natures;
     std::string jutsu_rank;
     [[maybe_unused]] std::string users;
 
@@ -21,7 +21,7 @@ public:
     virtual void add_chakra_nature(const Chakra_Nature& chakra_nature);
     void jutsu_method();
     friend std::ostream& operator<<(std::ostream& out, const Jutsu& jutsu);
-    ~Jutsu();
+    virtual ~Jutsu();
 };
 
 
